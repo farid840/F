@@ -11,26 +11,27 @@
 <meta property="og:locale" content="ru_RU">
 <meta property="og:title" content="Фарид Джураев — сайты, боты, ИИ-агенты и автоматизация бизнеса">
 <meta property="og:description" content="Делаю сайты, ботов, ИИ-агентов, приложения и автоматизацию бизнеса. Напишите в Telegram — обсудим вашу задачу.">
-<link rel="canonical" href="https://dzhuraevkod.ru/">
-<meta property="og:url" content="https://dzhuraevkod.ru/">
-<meta property="og:image" content="https://dzhuraevkod.ru/og.png">
+<link rel="canonical" href="https://dzhuraevkod.online/">
+<meta property="og:url" content="https://dzhuraevkod.online/">
+<meta property="og:image" content="https://dzhuraevkod.online/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%230A0A0A'/%3E%3Cg transform='translate(14 12) scale(.72)'%3E%3Cpolygon points='6,90 20,66 42,58 28,90' fill='%23FF4D4D'/%3E%3Cpolygon points='36,90 50,46 72,38 58,90' fill='%23FF4D4D'/%3E%3Cpolygon points='64,90 78,20 100,12 86,90' fill='%23FF4D4D'/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Фарид Джураев","jobTitle":"Разработчик: сайты, боты, ИИ-агенты, приложения, автоматизация бизнеса","knowsAbout":["Разработка сайтов","Telegram-боты","ИИ-агенты","Разработка приложений","Автоматизация бизнеса"],"sameAs":["https://t.me/ffounder1"]}
+{"@context":"https://schema.org","@type":"Person","name":"Фарид Джураев","url":"https://dzhuraevkod.online/","jobTitle":"Разработчик: сайты, боты, ИИ-агенты, приложения, автоматизация бизнеса","knowsAbout":["Разработка сайтов","Telegram-боты","ИИ-агенты","Разработка приложений","Автоматизация бизнеса"],"sameAs":["https://t.me/ffounder1"]}
 </script>
 <script>document.documentElement.className+=' js spa';</script>
 <style>
 /* ============ ДИЗАЙН-ТОКЕНЫ ============ */
 :root{
-  /* Шрифты: Golos Text (текст и заголовки) + Playfair Display italic (акцентные слова) */
-  --font-sans:'Golos Text',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
-  --font-serif:'Playfair Display',Georgia,'Times New Roman',serif;
+  /* Шрифты: Inter Tight (заголовки) + Inter (текст) + JetBrains Mono (метки, номера) */
+  --font-head:'Inter Tight','Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --font-sans:'Inter',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  --font-mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
 
   --bg:#0A0A0A;
   --text:#F5F5F5;
@@ -39,9 +40,11 @@
   --red-btn:#D81F26;
   --glass-line:rgba(255,255,255,.22);
   --card-line:rgba(255,255,255,.12);
+  --panel:rgba(10,10,10,.66);
 
   --gutter:clamp(20px,6vw,80px);
   --ease:cubic-bezier(.2,.7,.2,1);
+  --ease-io:cubic-bezier(.76,0,.24,1);
   --vh-safe:calc(100vh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px));
 }
 @supports (height:100svh){:root{--vh-safe:calc(100svh - env(safe-area-inset-top,0px) - env(safe-area-inset-bottom,0px))}}
@@ -51,13 +54,13 @@
 html{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
   background:var(--bg);scroll-padding-top:90px;-webkit-text-size-adjust:100%}
 html.intro-lock{overflow:hidden}
-body{margin:0;background:transparent;color:var(--text);font-family:var(--font-sans);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body{margin:0;background:transparent;color:var(--text);font-family:var(--font-sans);font-size:1rem;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:clip}
 a{color:inherit}
 svg{display:block}
+::selection{background:var(--red-btn);color:#fff}
 .ico{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.accent{font-family:var(--font-serif);font-style:italic;font-weight:400;color:var(--red);letter-spacing:-.01em}
+.accent{color:var(--red)}
 :focus-visible{outline:2px solid #fff;outline-offset:3px}
-
 
 /* ============ ФОН: видео на весь экран ============ */
 .bgv{position:fixed;inset:0;z-index:-3;width:100%;height:100%;object-fit:cover;object-position:50% 40%;background:#050909}
@@ -73,7 +76,7 @@ svg{display:block}
   display:flex;align-items:center;justify-content:space-between;gap:14px;padding:6px 6px 6px 18px;
   background:rgba(14,14,14,.55);border:1px solid var(--card-line);border-radius:999px;
   -webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
-.nav__brand{display:flex;align-items:center;gap:10px;font-weight:600;text-decoration:none;white-space:nowrap}
+.nav__brand{display:flex;align-items:center;gap:10px;font:600 1rem/1 var(--font-head);letter-spacing:-.01em;text-decoration:none;white-space:nowrap}
 .nav__brand svg{width:22px;height:22px;color:var(--red)}
 .nav__links{display:none;gap:4px}
 .nav__links a{display:inline-flex;align-items:center;min-height:42px;padding:0 16px;border-radius:999px;color:#D8D8D8;text-decoration:none;font-size:.9375rem;font-weight:500;transition:background .25s ease,color .25s ease}
@@ -95,7 +98,7 @@ svg{display:block}
   -webkit-backdrop-filter:blur(22px) saturate(1.4);backdrop-filter:blur(22px) saturate(1.4)}
 .nav--open~.menu{display:flex;animation:menuIn .35s var(--ease) both}
 @keyframes menuIn{from{opacity:0;transform:translateY(-8px) scale(.98)}to{opacity:1;transform:none}}
-.menu a{display:flex;align-items:center;min-height:52px;padding:0 18px;border-radius:18px;color:#EDEDED;text-decoration:none;font-size:1.125rem;font-weight:500}
+.menu a{display:flex;align-items:center;min-height:52px;padding:0 18px;border-radius:18px;color:#EDEDED;text-decoration:none;font:500 1.125rem var(--font-sans)}
 .menu a.is-current{background:rgba(255,255,255,.12);color:#fff}
 .menu .glass{margin-top:4px}
 @media (min-width:900px){
@@ -111,54 +114,90 @@ html.js.spa .page.is-active{display:block}
 .wrap{max-width:1100px;margin:0 auto}
 .page--home::before,.page--contacts::before{content:"";position:absolute;left:50%;top:50%;z-index:-1;width:min(980px,100%);height:76%;transform:translate(-50%,-50%);pointer-events:none;
   background:radial-gradient(ellipse closest-side,rgba(5,7,7,.62),rgba(5,7,7,.3) 62%,transparent)}
+.page--home::before{left:0;width:min(820px,100%);height:70%;transform:translateY(-50%);
+  background:radial-gradient(ellipse closest-side at 32% 50%,rgba(5,7,7,.6),rgba(5,7,7,.28) 62%,transparent)}
 .page--home,.page--contacts{position:relative;isolation:isolate}
-.page--home{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.page--home{display:flex;flex-direction:column;align-items:stretch;justify-content:center;text-align:left}
+.hero{width:100%}
+.hero .cta{justify-content:flex-start}
 html.js.spa .page--home.is-active{display:flex}
-.page h1,.page h2.title{margin:0 0 22px;font-weight:600;line-height:1.04;letter-spacing:-.035em;text-wrap:balance}
-.page--home h1{max-width:13ch;font-size:clamp(2.6rem,9.4vw,7.2rem);text-shadow:0 2px 28px rgba(0,0,0,.55)}
-.page h1.title{text-shadow:0 2px 24px rgba(0,0,0,.6);}
-.page h2.title,.page h1.title{font-size:clamp(2.2rem,6.4vw,4.6rem);margin-bottom:clamp(28px,4vw,48px)}
-.lead{margin:0 auto 38px;max-width:30ch;font-size:clamp(1.0625rem,2vw,1.35rem);color:#C9C9C9;text-shadow:0 1px 18px rgba(0,0,0,.65)}
+.page h1,.page h2.title{margin:0 0 22px;font-family:var(--font-head);font-weight:600;line-height:1.02;letter-spacing:-.045em;text-wrap:balance}
+.page--home h1{max-width:none;margin-bottom:clamp(24px,3.5vw,36px);font-size:clamp(2.1rem,6vw,4.4rem);text-shadow:0 2px 28px rgba(0,0,0,.55)}
+.page h1.title{text-shadow:0 2px 24px rgba(0,0,0,.6)}
+.page h2.title,.page h1.title{font-size:clamp(2.3rem,6.4vw,4.6rem);margin-bottom:clamp(28px,4vw,48px)}
+.lead{margin:0 auto 38px;max-width:34ch;font-size:clamp(1.0625rem,2vw,1.3rem);line-height:1.55;color:#CFCFCF;text-shadow:0 1px 18px rgba(0,0,0,.65)}
 .cta{display:flex;flex-wrap:wrap;gap:14px;justify-content:center}
-.tags{margin:34px 0 0;color:#B9B9B9;font-size:.9375rem;letter-spacing:.02em}
-.sub{margin:-8px 0 clamp(28px,4vw,48px);max-width:44ch;color:#C9C9C9;font-size:clamp(1.0625rem,1.8vw,1.25rem)}
 
-.cards{display:grid;gap:14px;grid-template-columns:1fr}
-.card{position:relative;padding:26px 26px 28px;border-radius:26px;
-  background:linear-gradient(160deg,rgba(255,255,255,.09),rgba(255,255,255,.02)),rgba(12,12,12,.74);
-  border:1px solid var(--card-line);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 24px 50px -30px rgba(0,0,0,.9)}
-.card__ico{width:46px;height:46px;display:grid;place-items:center;margin-bottom:18px;border-radius:14px;color:var(--red);background:rgba(255,255,255,.07);border:1px solid var(--card-line)}
-.card h3{margin:0 0 8px;font-size:1.375rem;font-weight:600;letter-spacing:-.02em;line-height:1.2}
-.card p{margin:0;color:#D2D2D2}
-.card__n{display:block;margin-bottom:14px;font:italic 400 2.4rem/1 var(--font-serif);color:var(--red)}
-@media (min-width:760px){
-  .cards--5{grid-template-columns:repeat(6,1fr)}.cards--5 .card{grid-column:span 2}.cards--5 .card:nth-child(4){grid-column:2 / span 2}.cards--5 .card:nth-child(5){grid-column:4 / span 2}
-  .cards--4{grid-template-columns:repeat(2,1fr)}
+/* метка над заголовком */
+.eyebrow{display:inline-flex;align-items:center;gap:10px;margin:0 0 clamp(20px,3vw,30px);padding:8px 14px 8px 12px;
+  font:500 .75rem/1 var(--font-mono);letter-spacing:.1em;text-transform:uppercase;color:#E6E6E6;
+  background:rgba(10,10,10,.5);border:1px solid var(--card-line);border-radius:999px;
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.eyebrow i{width:7px;height:7px;border-radius:50%;background:#4ADE80;box-shadow:0 0 0 3px rgba(74,222,128,.18),0 0 12px rgba(74,222,128,.7)}
+
+/* строки направлений */
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:clamp(30px,5vw,48px) 0 0;padding:0;list-style:none}
+.chips li{padding:8px 13px;font:400 .75rem/1 var(--font-mono);letter-spacing:.04em;color:#C9C9C9;
+  background:rgba(10,10,10,.45);border:1px solid var(--card-line);border-radius:999px}
+
+/* панель-подложка под списками (читаемость поверх видео) */
+.panel{margin:0;padding:0;list-style:none;border-radius:28px;background:var(--panel);border:1px solid var(--card-line);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14),0 30px 60px -34px #000;
+  -webkit-backdrop-filter:blur(18px) saturate(1.2);backdrop-filter:blur(18px) saturate(1.2);overflow:hidden}
+
+.row{position:relative;display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:start;padding:26px clamp(20px,3vw,40px);border-top:1px solid var(--card-line);
+  transition:background .35s ease}
+.row:first-child{border-top:0}
+.row::before{content:"";position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--red);transform:scaleY(0);transition:transform .4s var(--ease)}
+.row:hover{background:rgba(255,255,255,.04)}
+.row:hover::before{transform:scaleY(1)}
+.row__n{grid-column:1 / -1;font:400 .8125rem/1 var(--font-mono);letter-spacing:.08em;color:var(--red)}
+.row h3{grid-column:1;margin:6px 0 0;font:600 clamp(1.5rem,3.4vw,2.15rem)/1.12 var(--font-head);letter-spacing:-.03em}
+.row p{grid-column:1 / -1;margin:8px 0 0;max-width:52ch;color:#CFCFCF}
+.row__go{grid-column:2;grid-row:2;width:26px;height:26px;margin-top:6px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;color:#9A9A9A;
+  transition:transform .35s var(--ease),color .3s ease}
+.row:hover .row__go{transform:translate(3px,-3px);color:#fff}
+@media (min-width:860px){
+  .row{grid-template-columns:56px minmax(0,1.15fr) minmax(0,1fr) 32px;gap:0 24px;align-items:baseline;padding:34px clamp(24px,3vw,44px)}
+  .row h3{font-size:clamp(1.6rem,2.5vw,2rem)}
+  .row__n{grid-column:1}
+  .row h3{grid-column:2;margin:0}
+  .row p{grid-column:3;margin:0}
+  .row__go{grid-column:4;grid-row:1;margin:0;align-self:center}
 }
-@media (min-width:1100px){.cards--4{grid-template-columns:repeat(4,1fr)}}
+
+/* шаги */
+.steps{display:grid;grid-template-columns:1fr}
+.step{position:relative;padding:28px clamp(20px,3vw,32px) 30px;border-top:1px solid var(--card-line)}
+.step:first-child{border-top:0}
+.step__n{display:block;margin-bottom:22px;font:400 .8125rem/1 var(--font-mono);letter-spacing:.08em;color:var(--red)}
+.step h3{margin:0 0 8px;font:600 1.4rem/1.15 var(--font-head);letter-spacing:-.025em}
+.step p{margin:0;color:#CFCFCF}
+@media (min-width:760px){.steps{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-top:0}.step:nth-child(even){border-left:1px solid var(--card-line)}}
+@media (min-width:1100px){.steps{grid-template-columns:repeat(4,1fr)}.step{border-top:0;padding:34px 28px 38px}.step+.step{border-left:1px solid var(--card-line)}}
 .more{margin-top:clamp(30px,4vw,48px);display:flex;justify-content:center}
 
 .page--contacts{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
 html.js.spa .page--contacts.is-active{display:flex}
-.page--contacts h1{max-width:12ch;font-size:clamp(2.4rem,8vw,6rem);text-shadow:0 2px 28px rgba(0,0,0,.55)}
-.nick{display:block;margin-top:18px;color:#C9C9C9;font-size:1rem}
+.page--contacts h1{max-width:12ch;font-size:clamp(2.5rem,8vw,6rem);text-shadow:0 2px 28px rgba(0,0,0,.55)}
+.nick{display:block;margin-top:20px;font:400 .875rem var(--font-mono);letter-spacing:.04em;color:#C9C9C9}
 
 .footer{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;padding:20px var(--gutter) 26px;
-  border-top:1px solid var(--card-line);color:#B9B9B9;font-size:.9375rem;background:rgba(8,8,8,.55)}
+  border-top:1px solid var(--card-line);color:#B9B9B9;font:400 .8125rem var(--font-mono);letter-spacing:.03em;background:rgba(8,8,8,.55)}
 .footer a{text-decoration:none}.footer a:hover{color:#fff}
 
 /* появление блоков при открытии страницы */
 html.js .page.is-active .reveal,html.js:not(.spa) .page .reveal{animation:rise .85s var(--ease) both;animation-delay:calc(var(--i,0) * 90ms)}
 @keyframes rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 html.intro .page .reveal{animation:none;opacity:0}
-html.intro .page--home .reveal{opacity:0}
 html.ready .page .reveal{animation-name:rise}
+
 /* ============ СТЕКЛЯННЫЕ КНОПКИ ============ */
 .glass{
   position:relative;overflow:hidden;
   display:inline-flex;align-items:center;justify-content:center;gap:10px;
   min-height:54px;padding:0 28px;
-  font:600 1.0625rem/1 var(--font-sans);color:#fff;text-decoration:none;
+  font:600 1.0625rem/1 var(--font-sans);letter-spacing:-.005em;color:#fff;text-decoration:none;
   border-radius:999px;
   background:linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,255,255,.05));
   border:1px solid var(--glass-line);
@@ -167,7 +206,7 @@ html.ready .page .reveal{animation-name:rise}
   transition:transform .3s var(--ease),box-shadow .3s ease,border-color .3s ease;
 }
 .glass::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(110deg,transparent 28%,rgba(255,255,255,.34) 48%,transparent 68%);transform:translateX(-130%);transition:transform .9s var(--ease)}
+  background:linear-gradient(110deg,transparent 28%,rgba(255,255,255,.3) 48%,transparent 68%);transform:translateX(-130%);transition:transform .9s var(--ease)}
 .glass:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.4)}
 .glass:hover::before{transform:translateX(130%)}
 .glass:active{transform:translateY(0) scale(.98)}
@@ -181,42 +220,33 @@ html.ready .page .reveal{animation-name:rise}
 .glass--sm{min-height:42px;padding:0 18px;font-size:.9375rem}
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
   .glass{background:rgba(48,48,48,.92)}.glass--red{background:var(--red-btn)}
+  .panel{background:rgba(10,10,10,.9)}
 }
 
-/* ============ ИНТРО С ЛОГОТИПОМ ============ */
-.intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;background:var(--red-btn);
-  animation:iBg .9s 1.45s both ease,iOut .7s 4.5s both ease;cursor:pointer}
-@keyframes iBg{to{background-color:#0A0A0A}}
-@keyframes iOut{to{opacity:0;visibility:hidden}}
-.intro__grid{position:absolute;inset:0;width:100%;height:100%}
-.intro__grid line{stroke:rgba(255,255,255,.4);stroke-width:1;stroke-dasharray:1;stroke-dashoffset:1;
-  animation:iLine .9s calc(.1s + var(--i) * .05s) both ease-out,iGridOut .6s 1.5s both}
-@keyframes iLine{to{stroke-dashoffset:0}}
-@keyframes iGridOut{to{opacity:0}}
-.intro__glow{position:absolute;width:80vmin;height:80vmin;border-radius:50%;opacity:0;
-  background:radial-gradient(circle,rgba(255,77,77,.6),rgba(216,31,38,.18) 45%,transparent 68%);animation:iGlow 1.8s 1.6s both ease-in-out}
-@keyframes iGlow{0%{opacity:0;transform:scale(.6)}45%{opacity:1;transform:scale(1)}100%{opacity:.55;transform:scale(1.1)}}
-.intro__lock{position:relative;display:flex;align-items:center}
-.intro__mark{width:clamp(80px,20vw,150px);height:clamp(80px,20vw,150px);overflow:visible;animation:iTilt 1.5s 2s both ease-in-out}
-@keyframes iTilt{0%{transform:perspective(700px) rotateY(0) scale(1)}50%{transform:perspective(700px) rotateY(-34deg) scale(1.1)}100%{transform:perspective(700px) rotateY(0) scale(1)}}
-.intro__mark .o polygon{fill:rgba(255,255,255,.14);stroke:#fff;stroke-width:1.2;opacity:0;
-  animation:iPiece .9s var(--dl) both cubic-bezier(.2,.8,.2,1)}
-@keyframes iPiece{from{opacity:0;transform:translate(var(--dx),var(--dy))}to{opacity:1;transform:none}}
-.intro__mark .o{animation:iOutline .5s 1.55s both}
-@keyframes iOutline{to{opacity:.25}}
-.intro__mark .solid{opacity:0;fill:url(#gMark);stroke:rgba(255,255,255,.7);stroke-width:.8;animation:iSolid .7s 1.5s both;
-  filter:drop-shadow(0 0 18px rgba(255,77,77,.8))}
-@keyframes iSolid{to{opacity:1}}
-.intro__word{max-width:0;overflow:hidden;white-space:nowrap;opacity:0;font-weight:700;font-size:clamp(1.3rem,5vw,3.2rem);letter-spacing:-.03em;
-  animation:iWord .9s 3.3s both cubic-bezier(.2,.7,.2,1)}
-@keyframes iWord{from{max-width:0;opacity:0;margin-left:0}to{max-width:10em;opacity:1;margin-left:.4em}}
-.intro__skip{position:absolute;left:50%;bottom:calc(28px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);
-  min-height:44px;padding:0 18px;font:500 .9375rem var(--font-sans);color:#fff;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.4);border-radius:999px;
-  opacity:0;animation:iSkip .5s .9s both}
-@keyframes iSkip{to{opacity:1}}
-.intro--skip{animation:none!important;opacity:0;visibility:hidden;transition:opacity .35s ease}
-
-
+/* ============ ИНТРО (≈2,5 с, один раз за визит) ============ */
+.intro{position:fixed;inset:0;z-index:300;display:grid;place-items:center;overflow:hidden;background:var(--bg);cursor:pointer;
+  clip-path:inset(0 0 0 0);animation:iCurtain .85s 1.75s both var(--ease-io)}
+@keyframes iCurtain{to{clip-path:inset(0 0 100% 0)}}
+.intro__center{display:flex;flex-direction:column;align-items:center;gap:22px;text-align:center;animation:iFade .35s 1.5s both ease-in}
+@keyframes iFade{to{opacity:0;transform:translateY(-10px)}}
+.intro__mark{width:clamp(56px,13vw,84px);height:clamp(56px,13vw,84px);overflow:visible}
+.intro__mark polygon{fill:url(#gMark);transform-box:fill-box;transform-origin:50% 100%;opacity:0;
+  animation:iGrow .75s var(--d) both cubic-bezier(.2,.8,.2,1)}
+@keyframes iGrow{from{opacity:0;transform:scaleY(.05)}to{opacity:1;transform:none}}
+.intro__name{overflow:hidden;padding:.08em .04em}
+.intro__name span{display:block;font:600 clamp(2rem,7.4vw,3.9rem)/1.05 var(--font-head);letter-spacing:-.045em;
+  transform:translateY(110%);animation:iUp .8s .6s both cubic-bezier(.2,.8,.2,1)}
+@keyframes iUp{to{transform:none}}
+.intro__role{font:400 .75rem/1 var(--font-mono);letter-spacing:.14em;text-transform:uppercase;color:#A8A8A8;opacity:0;animation:iIn .6s 1.0s both ease-out}
+@keyframes iIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+.intro__bar{position:absolute;left:50%;bottom:calc(34px + env(safe-area-inset-bottom,0px));width:min(180px,40vw);height:1px;transform:translateX(-50%);background:rgba(255,255,255,.14);overflow:hidden;animation:iFade .3s 1.5s both}
+.intro__bar i{display:block;height:100%;background:var(--red);transform-origin:left;transform:scaleX(0);animation:iBar 1.5s .2s both cubic-bezier(.6,.1,.3,1)}
+@keyframes iBar{to{transform:scaleX(1)}}
+.intro__skip{position:absolute;right:calc(18px + env(safe-area-inset-right,0px));top:calc(18px + env(safe-area-inset-top,0px));
+  min-height:44px;padding:0 16px;font:400 .75rem var(--font-mono);letter-spacing:.08em;text-transform:uppercase;color:#9A9A9A;background:none;border:0;cursor:pointer;
+  opacity:0;animation:iIn .5s .8s both}
+.intro__skip:hover{color:#fff}
+.intro--skip{animation:none!important;opacity:0;visibility:hidden;transition:opacity .3s ease}
 
 @media (prefers-reduced-motion:reduce){
   .intro{display:none}
@@ -246,27 +276,31 @@ html.ready .page .reveal{animation-name:rise}
 
 <main>
     <section class="page page--home" data-page="home" id="page-home" aria-label="Главная">
-      <h1 class="reveal" style="--i:0">Делаю сайты, ботов и <span class="accent">ИИ‑агентов</span></h1>
-      <p class="lead reveal" style="--i:1">Приложения и автоматизация бизнеса — чтобы рутина работала без вас.</p>
-      <div class="cta reveal" style="--i:2"><a class="glass glass--red glass--lg" href="https://t.me/ffounder1?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%A4%D0%B0%D1%80%D0%B8%D0%B4%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.5 2.8 10.9l5.9 2.3 2.3 6.5 3.2-4.4 4.9 3.6L21.5 3.5Z"/><path d="m8.7 13.2 12.8-9.7"/></svg>Написать в Telegram</a><a class="glass glass--lg" href="#services" data-go="services">Что делаю</a></div>
-      <p class="tags reveal" style="--i:3">Сайты · Боты · ИИ‑агенты · Приложения · Автоматизация</p>
+      <div class="wrap hero">
+        <h1 class="reveal" style="--i:0">Фарид Джураев</h1>
+        <div class="cta reveal" style="--i:1"><a class="glass glass--lg" href="#services" data-go="services">Что делаю</a></div>
+      </div>
     </section>
     <section class="page page--services" data-page="services" id="page-services" aria-label="Услуги">
       <div class="wrap"><h1 class="title reveal" style="--i:0">Что <span class="accent">делаю</span></h1>
-      <div class="cards cards--5"><article class="card reveal" style="--i:1"><div class="card__ico"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg></div><h3>Сайты</h3><p>Лендинги, сайты услуг и магазины. Аккуратно выглядят и удобно открываются на телефоне.</p></article>
-<article class="card reveal" style="--i:2"><div class="card__ico"><svg class="ico" viewBox="0 0 24 24"><rect x="4" y="8" width="16" height="11" rx="3"/><path d="M12 4.5V8M9 13h.01M15 13h.01M9.5 16.2h5"/><circle cx="12" cy="3.5" r="1"/></svg></div><h3>Боты</h3><p>Боты для Telegram: принимают заявки, отвечают клиентам, присылают уведомления и делают рассылки.</p></article>
-<article class="card reveal" style="--i:3"><div class="card__ico"><svg class="ico" viewBox="0 0 24 24"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z"/><path d="m18.5 16.5.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7.7-1.8Z"/></svg></div><h3>ИИ‑агенты</h3><p>Помощники на базе ИИ: общаются с клиентами и обрабатывают обращения вместо вас.</p></article>
-<article class="card reveal" style="--i:4"><div class="card__ico"><svg class="ico" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></div><h3>Приложения</h3><p>Делаю приложения под вашу задачу: от простого сервиса до рабочего инструмента.</p></article>
-<article class="card reveal" style="--i:5"><div class="card__ico"><svg class="ico" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a4 4 0 0 1 4 4v5.5M15.5 18H10a4 4 0 0 1-4-4V8.5"/></svg></div><h3>Автоматизация бизнеса</h3><p>Связываю сервисы между собой, чтобы заявки, таблицы и оплаты работали без ручной рутины.</p></article></div>
-      <div class="more reveal" style="--i:6"><a class="glass glass--red glass--lg" href="https://t.me/ffounder1?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%A4%D0%B0%D1%80%D0%B8%D0%B4%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.5 2.8 10.9l5.9 2.3 2.3 6.5 3.2-4.4 4.9 3.6L21.5 3.5Z"/><path d="m8.7 13.2 12.8-9.7"/></svg>Обсудить задачу</a></div></div>
+      <ul class="panel reveal" style="--i:1">
+<li class="row"><span class="row__n">01</span><h3>Сайты</h3><p>Лендинги, сайты услуг и магазины. Аккуратно выглядят и удобно открываются на телефоне.</p><svg class="row__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></li>
+<li class="row"><span class="row__n">02</span><h3>Боты</h3><p>Боты для Telegram: принимают заявки, отвечают клиентам, присылают уведомления и делают рассылки.</p><svg class="row__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></li>
+<li class="row"><span class="row__n">03</span><h3>ИИ‑агенты</h3><p>Помощники на базе ИИ: общаются с клиентами и обрабатывают обращения вместо вас.</p><svg class="row__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></li>
+<li class="row"><span class="row__n">04</span><h3>Приложения</h3><p>Делаю приложения под вашу задачу: от простого сервиса до рабочего инструмента.</p><svg class="row__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></li>
+<li class="row"><span class="row__n">05</span><h3>Автоматизация бизнеса</h3><p>Связываю сервисы между собой, чтобы заявки, таблицы и оплаты работали без ручной рутины.</p><svg class="row__go" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></li>
+      </ul>
+      <div class="more reveal" style="--i:2"><a class="glass glass--red glass--lg" href="https://t.me/ffounder1?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%A4%D0%B0%D1%80%D0%B8%D0%B4%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.5 2.8 10.9l5.9 2.3 2.3 6.5 3.2-4.4 4.9 3.6L21.5 3.5Z"/><path d="m8.7 13.2 12.8-9.7"/></svg>Обсудить задачу</a></div></div>
     </section>
     <section class="page page--process" data-page="process" id="page-process" aria-label="Как работаю">
       <div class="wrap"><h1 class="title reveal" style="--i:0">Как <span class="accent">работаю</span></h1>
-      <div class="cards cards--4"><article class="card reveal" style="--i:1"><span class="card__n">01</span><h3>Пишете в Telegram</h3><p>Коротко расскажите, что нужно сделать.</p></article>
-<article class="card reveal" style="--i:2"><span class="card__n">02</span><h3>Уточняем задачу</h3><p>Обсуждаем, как всё должно работать.</p></article>
-<article class="card reveal" style="--i:3"><span class="card__n">03</span><h3>Делаю и показываю</h3><p>Вы видите результат и говорите, что поправить.</p></article>
-<article class="card reveal" style="--i:4"><span class="card__n">04</span><h3>Запускаю</h3><p>Довожу до рабочего состояния и передаю вам.</p></article></div>
-      <div class="more reveal" style="--i:5"><a class="glass glass--red glass--lg" href="https://t.me/ffounder1?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%A4%D0%B0%D1%80%D0%B8%D0%B4%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.5 2.8 10.9l5.9 2.3 2.3 6.5 3.2-4.4 4.9 3.6L21.5 3.5Z"/><path d="m8.7 13.2 12.8-9.7"/></svg>Написать в Telegram</a></div></div>
+      <ol class="panel steps reveal" style="--i:1">
+<li class="step"><span class="step__n">01</span><h3>Пишете в Telegram</h3><p>Коротко расскажите, что нужно сделать.</p></li>
+<li class="step"><span class="step__n">02</span><h3>Уточняем задачу</h3><p>Обсуждаем, как всё должно работать.</p></li>
+<li class="step"><span class="step__n">03</span><h3>Делаю и показываю</h3><p>Вы видите результат и говорите, что поправить.</p></li>
+<li class="step"><span class="step__n">04</span><h3>Запускаю</h3><p>Довожу до рабочего состояния и передаю вам.</p></li>
+      </ol>
+      <div class="more reveal" style="--i:2"><a class="glass glass--red glass--lg" href="https://t.me/ffounder1?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%A4%D0%B0%D1%80%D0%B8%D0%B4%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%81%D1%83%D0%B4%D0%B8%D1%82%D1%8C%20%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82." target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 3.5 2.8 10.9l5.9 2.3 2.3 6.5 3.2-4.4 4.9 3.6L21.5 3.5Z"/><path d="m8.7 13.2 12.8-9.7"/></svg>Написать в Telegram</a></div></div>
     </section>
     <section class="page page--contacts" data-page="contacts" id="page-contacts" aria-label="Контакты">
       <h1 class="reveal" style="--i:0">Есть задача? <span class="accent">Напишите</span></h1>
@@ -289,36 +323,39 @@ html.ready .page .reveal{animation-name:rise}
   function lerp(a,b,t){return a+(b-a)*t;}
   function ease(t){return t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;}
 
-  /* ===== Интро с логотипом (один раз при открытии) ===== */
-  var MARK_OUT='<polygon points="6,90 20,66 42,58 28,90" style="--dx:-34px;--dy:46px;--dl:0.35s"/><polygon points="36,90 50,46 72,38 58,90" style="--dx:0px;--dy:60px;--dl:0.61s"/><polygon points="64,90 78,20 100,12 86,90" style="--dx:34px;--dy:46px;--dl:0.88s"/>',MARK_SOLID='<polygon points="6,90 20,66 42,58 28,90"/><polygon points="36,90 50,46 72,38 58,90"/><polygon points="64,90 78,20 100,12 86,90"/>';
+  /* ===== Интро (один раз за визит) ===== */
   function intro(){
-    var i,lines='';
-    for(i=1;i<8;i++)lines+='<line x1="'+(i*12.5)+'%" y1="0" x2="'+(i*12.5)+'%" y2="100%" pathLength="1" style="--i:'+i+'"/>';
-    for(i=1;i<6;i++)lines+='<line x1="0" y1="'+(i*16.66)+'%" x2="100%" y2="'+(i*16.66)+'%" pathLength="1" style="--i:'+(i+2)+'"/>';
+    try{if(win.sessionStorage.getItem('introSeen')){return;}win.sessionStorage.setItem('introSeen','1');}catch(e){}
     var el=doc.createElement('div');
     el.className='intro';
     el.setAttribute('role','presentation');
-    el.innerHTML='<svg class="intro__grid" aria-hidden="true">'+lines+'</svg>'
-      +'<div class="intro__glow"></div>'
-      +'<div class="intro__lock"><svg class="intro__mark" viewBox="0 0 100 100" aria-hidden="true"><g class="o">'+MARK_OUT+'</g><g class="solid">'+MARK_SOLID+'</g></svg>'
-      +'<span class="intro__word">Фарид Джураев</span></div>'
+    el.innerHTML='<div class="intro__center">'
+      +'<svg class="intro__mark" viewBox="0 0 100 100" aria-hidden="true">'
+      +'<polygon style="--d:.15s" points="6,90 20,66 42,58 28,90"/>'
+      +'<polygon style="--d:.3s" points="36,90 50,46 72,38 58,90"/>'
+      +'<polygon style="--d:.45s" points="64,90 78,20 100,12 86,90"/></svg>'
+      +'<div class="intro__name"><span>Фарид Джураев</span></div>'
+      +'<div class="intro__role">Сайты · Боты · ИИ‑агенты</div></div>'
+      +'<div class="intro__bar" aria-hidden="true"><i></i></div>'
       +'<button class="intro__skip" type="button">Пропустить</button>';
     doc.body.appendChild(el);
     root.classList.add('intro','intro-lock');
-    var done=false;
+    var done=false,released=false;
+    function release(){if(released)return;released=true;root.classList.remove('intro');root.classList.add('ready');}
     function end(){
-      if(done)return;done=true;
+      if(done)return;done=true;release();
       if(el.parentNode)el.parentNode.removeChild(el);
-      root.classList.remove('intro','intro-lock');root.classList.add('ready');
+      root.classList.remove('intro-lock');
     }
-    function skip(){el.classList.add('intro--skip');setTimeout(end,380);}
+    function skip(){release();el.classList.add('intro--skip');setTimeout(end,320);}
     el.addEventListener('click',skip);
-    el.addEventListener('animationend',function(e){if(e.animationName==='iOut')end();});
-    setTimeout(end,6500);   // страховка: интро не может заблокировать сайт
+    doc.addEventListener('keydown',function(e){if(done)return;if(e.key==='Escape'||e.key==='Enter'||e.key===' ')skip();});
+    el.addEventListener('animationend',function(e){if(e.animationName==='iCurtain')end();});
+    setTimeout(release,1900);   // текст страницы начинает появляться, пока поднимается «занавес»
+    setTimeout(end,4000);       // страховка: интро не может заблокировать сайт
   }
   if(!reduce){try{intro();}catch(e){root.classList.remove('intro','intro-lock');}}
 
-  
   /* ===== Видео-фон ===== */
   var vid=doc.getElementById('bgv');
   if(vid){
